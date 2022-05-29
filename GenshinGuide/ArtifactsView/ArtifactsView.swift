@@ -11,10 +11,11 @@ struct ArtifactsView: View {
     var body: some View {
         NavigationView{
             ZStack{
-                Color.blue
+                Color.purple
                     
             }
             .navigationTitle("Artifacts")
+            
             
         }
     }

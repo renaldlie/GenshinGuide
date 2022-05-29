@@ -19,11 +19,11 @@ struct SplashScreenView: View {
                 VStack{
                     Image("Windrise")
                         .resizable()
-                        .frame(width: 100, height:100)
+                        .frame(width: 200, height:200)
                         .font(.system(size: 80))
                         .foregroundColor(.red)
                     Text("WindRise")
-                        .font(Font.custom("Baskerville-bold", size: 26))
+                        .font(Font.custom("Baskerville-bold", size: 30))
                         .foregroundColor(.black.opacity(0.80))
                 }
                 .scaleEffect(size)
