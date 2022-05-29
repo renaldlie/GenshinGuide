@@ -10,21 +10,32 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         
-        NavigationView{
-            ZStack{
-                Color.blue
-                Text("Current Banner")
-                    .font(.system(size: 20))
-                    .fontWeight(.medium)
-                Spacer()
-                
-                  
+        HStack {
+            NavigationView{
+                ZStack{
+                    Color.purple
+                    VStack{
+                        Text("Current Banner")
+                            .font(.system(size: 20))
+                            .fontWeight(.bold)
+                            .padding(.top)
+                        Image("currentBanner")
+                            .resizable()
+                            .padding()
+                            .frame(width: 400, height: 200, alignment: .top)
+                            .cornerRadius(30)
+                        VStack{
+                            Color.blue
+                            
+                        }
+                        
+                       
+                            .navigationTitle("Home")
+                    }
                     
                     
-                    
+                }
             }
-            .navigationTitle("Home")
-            
         }
     }
 }

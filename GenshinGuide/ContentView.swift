@@ -20,29 +20,29 @@ struct ContentView: View {
                 .tabItem{
                     Image(systemName: "house")
                     Text("Home")
-                        .frame(maxWidth: .infinity, alignment: .center)
+                        
                 }
             CharactersView()
                 .tabItem{
-                    Image(systemName: "gear")
+                    Image(systemName: "person")
                     Text("Characters")
                     
                 }
             WeaponsView()
                 .tabItem{
-                    Image(systemName: "gear")
+                    Image(systemName: "hammer")
                     Text("Weapons")
                     
                 }
             ArtifactsView()
                 .tabItem{
-                    Image(systemName: "gear")
+                    Image(systemName: "crown")
                     Text("Artifacts")
                     
                 }
             MapView()
                 .tabItem{
-                    Image(systemName: "gear")
+                    Image(systemName: "map")
                     Text("Map")
                     
                 }
