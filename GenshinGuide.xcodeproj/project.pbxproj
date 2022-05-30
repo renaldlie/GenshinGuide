@@ -12,8 +12,6 @@
 		521CEACC2843688600E003B2 /* ArtifactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521CEACB2843688600E003B2 /* ArtifactsView.swift */; };
 		521CEACE2843689100E003B2 /* WeaponsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521CEACD2843689100E003B2 /* WeaponsView.swift */; };
 		521CEAD1284368A600E003B2 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521CEAD0284368A600E003B2 /* CharactersView.swift */; };
-		521CEAD528436CBE00E003B2 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521CEAD428436CBE00E003B2 /* CharacterDetailView.swift */; };
-		521CEADB28439C1400E003B2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521CEADA28439C1400E003B2 /* API.swift */; };
 		525421E92843564C00399175 /* GenshinGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525421E82843564C00399175 /* GenshinGuideApp.swift */; };
 		525421EB2843564C00399175 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525421EA2843564C00399175 /* ContentView.swift */; };
 		525421ED2843564D00399175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 525421EC2843564D00399175 /* Assets.xcassets */; };
@@ -27,8 +25,6 @@
 		521CEACB2843688600E003B2 /* ArtifactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactsView.swift; sourceTree = "<group>"; };
 		521CEACD2843689100E003B2 /* WeaponsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsView.swift; sourceTree = "<group>"; };
 		521CEAD0284368A600E003B2 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
-		521CEAD428436CBE00E003B2 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
-		521CEADA28439C1400E003B2 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		525421E52843564C00399175 /* GenshinGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenshinGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		525421E82843564C00399175 /* GenshinGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenshinGuideApp.swift; sourceTree = "<group>"; };
 		525421EA2843564C00399175 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				521CEAD0284368A600E003B2 /* CharactersView.swift */,
-				521CEAD428436CBE00E003B2 /* CharacterDetailView.swift */,
 			);
 			path = CharactersView;
 			sourceTree = "<group>";
@@ -118,7 +113,6 @@
 				525421F62843580800399175 /* SplashScreenView.swift */,
 				525421EC2843564D00399175 /* Assets.xcassets */,
 				525421EE2843564D00399175 /* Preview Content */,
-				521CEADA28439C1400E003B2 /* API.swift */,
 			);
 			path = GenshinGuide;
 			sourceTree = "<group>";
@@ -201,8 +195,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				521CEADB28439C1400E003B2 /* API.swift in Sources */,
-				521CEAD528436CBE00E003B2 /* CharacterDetailView.swift in Sources */,
 				525421EB2843564C00399175 /* ContentView.swift in Sources */,
 				521CEAC2284367CA00E003B2 /* HomeView.swift in Sources */,
 				521CEAD1284368A600E003B2 /* CharactersView.swift in Sources */,
@@ -338,6 +330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GenshinGuide/Preview Content\"";
@@ -367,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GenshinGuide/Preview Content\"";

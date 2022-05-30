@@ -27,6 +27,7 @@ struct WeaponsView: View {
         NavigationView{
             
             List(weaponList) { WeaponItem in
+                NavigationLink(destination: WeaponDetailsView(weaponItem:WeaponItem)){
                 HStack {
                     
                     ZStack{
@@ -42,11 +43,66 @@ struct WeaponsView: View {
                         .font(.headline)
                 }
                 
-                    
+                }
             }
             
             .navigationTitle("Weapons")
             
+        }
+    }
+}
+
+struct WeaponDetailsView: View {
+    
+    let weaponItem: WeaponItem
+    
+    var body: some View{
+        
+            
+        VStack(alignment: .center){
+            HStack{
+                
+                
+                
+            }
+            Image(weaponItem.image)
+                .resizable()
+                
+                    .shadow(radius: 3)
+                    .font(.largeTitle)
+                    .frame(width: 100, height: 100)
+            
+            
+            Text(weaponItem.name)
+                .font(.largeTitle)
+                .bold()
+          
+            Text("Description : " + weaponItem.description)
+                .font(.largeTitle)
+            
+            Spacer()
+        }
+        .padding()
+        .navigationBarTitle(Text(weaponItem.name), displayMode: .inline)
+        
+            
+    }
+}
+
+struct WeaponCircleView: View {
+    
+    let weaponItem: CharacterItem
+    
+    var body: some View{
+        ZStack{
+            
+            Image(weaponItem.image)
+                .resizable()
+                
+                    .shadow(radius: 3)
+                    .font(.largeTitle)
+                    .frame(width: 80, height: 80)
+                    .overlay(Rectangle().stroke(Color.yellow, lineWidth: 3))
         }
     }
 }

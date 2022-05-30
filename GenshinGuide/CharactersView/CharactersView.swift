@@ -7,13 +7,23 @@
 
 import SwiftUI
 
-let numb:Int = 9
 
-struct Character: Identifiable{
-    var id: Int
-    
-    let charactername, imageName: String
-    
+private let characterList: [CharacterItem] = [
+    CharacterItem(
+        image:"ZhongLi",
+        name:"Zhongli",
+        element:"Geo",
+        description:"His name is morax"
+    )
+]
+
+struct CharacterItem: Identifiable{
+    let id = UUID()
+    let image: String
+    let name: String
+    let element: String
+    let description: String
+   
 }
 
 
@@ -23,19 +33,16 @@ struct CharactersView: View {
     
     var body: some View {
         NavigationView{
-            ZStack{
-                Color.white
-                VStack{
-                    List{
+            List(characterList) { CharacterItem in
+                NavigationLink(destination: DetailsView(characterItem: CharacterItem)){
+                HStack {
+                    CharacterCircleView(characterItem: CharacterItem)
                     
-                        CharacterRow(title: "Zhongli")
-                        CharacterRow(title: "Ayaka")
                     }
-                    
-                    
-                    
+                    Text(CharacterItem.name)
+                        .font(.headline)
                 }
-                    
+                
             }
             .navigationTitle("Characters")
             
@@ -43,20 +50,60 @@ struct CharactersView: View {
     }
 }
 
-struct CharacterRow: View {
-    let title: String
+struct DetailsView: View {
+    
+    let characterItem: CharacterItem
     
     var body: some View{
-        Label(
-            title: { Text(title) },
-            icon: { Image("ZhongLi")
-                    .resizable()
-                    .background(.yellow)
-                    .cornerRadius(30)
-                    .frame(width: 50, height: 50)}
-                
+        
             
-        )
+        VStack(alignment: .center){
+            HStack{
+                
+                
+                
+            }
+            Image(characterItem.image)
+                .resizable()
+                
+                    .shadow(radius: 3)
+                    .font(.largeTitle)
+                    .frame(width: 100, height: 100)
+            
+            
+            Text(characterItem.name)
+                .font(.largeTitle)
+                .bold()
+            Text("Element : " + characterItem.element)
+                .font(.largeTitle)
+                .bold()
+            Text("Description : " + characterItem.description)
+                .font(.largeTitle)
+            
+            Spacer()
+        }
+        .padding()
+        .navigationBarTitle(Text(characterItem.name), displayMode: .inline)
+        
+            
+    }
+}
+
+struct CharacterCircleView: View {
+    
+    let characterItem: CharacterItem
+    
+    var body: some View{
+        ZStack{
+            
+            Image(characterItem.image)
+                .resizable()
+                
+                    .shadow(radius: 3)
+                    .font(.largeTitle)
+                    .frame(width: 80, height: 80)
+                    .overlay(Rectangle().stroke(Color.yellow, lineWidth: 3))
+        }
     }
 }
 struct CharactersView_Previews: PreviewProvider {

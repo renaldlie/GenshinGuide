@@ -12,7 +12,7 @@ struct domainRow : View {
     var body: some View{
         VStack{
         
-        Image("backpurple")
+        Image("Domain_of_Guyun")
         }.frame(width: 150, height: 130)
             .cornerRadius(30)
             .shadow(radius: 20)
@@ -71,8 +71,7 @@ struct HomeView: View {
                             
                             List{
                                 Text("Favourite Character")
-                                CharacterRow(title: "Zhongli")
-                                CharacterRow(title: "Ayaka")
+                                
                             }
                             
                         }
