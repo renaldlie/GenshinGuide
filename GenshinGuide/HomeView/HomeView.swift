@@ -51,7 +51,7 @@ struct HomeView: View {
                             .font(.system(size: 20))
                             .fontWeight(.bold)
                             .padding(.top)
-                        Image("currentBanner")
+                        Image("YelanBanner")
                             .resizable()
                             .frame(width: 400, height: 200, alignment: .top)
                             .cornerRadius(30)
@@ -61,7 +61,7 @@ struct HomeView: View {
                                 .fontWeight(.black)
                             ScrollView(.horizontal, showsIndicators: false){
                                 HStack{
-                                    ForEach(0..<3){i in
+                                    ForEach(0..<6){i in
                                         domainRow(img: "backpurple").padding()
                                     }
                                 }
@@ -69,10 +69,7 @@ struct HomeView: View {
                                 
                             
                             
-                            List{
-                                Text("Favourite Character")
-                                
-                            }
+                            
                             
                         }
                         

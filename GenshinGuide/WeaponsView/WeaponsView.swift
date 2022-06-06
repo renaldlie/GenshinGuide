@@ -11,7 +11,47 @@ private let weaponList: [WeaponItem] = [
     WeaponItem(
         image:"Staffofhoma",
         name:"Staff Of Homa",
-        description:"Just a sword"
+        rating:"5 star",
+        type:"Polearm",
+        baseatk:"49",
+        secstat:"CRITDMG%",
+        description:"HP increased by 20%. Additionally, provides an ATK Bonus based on 0.8% of the wielder’s Max HP. When the wielder's HP is less than 50%, this ATK Bonus is increased by an additional 1% of Max HP."
+    ),
+    WeaponItem(
+        image:"Amosbow",
+        name:"Amos Bow",
+        rating:"5 star",
+        type:"Bow",
+        baseatk:"46",
+        secstat:"ATK%",
+        description:"Increases Normal Attack and Aimed Shot DMG by 18%. Increases DMG by 12% for every 0.1s that an arrow is in flight. Stacks up to 5 times on each arrow."
+    ),
+    WeaponItem(
+        image:"SkywardBlade",
+        name:"Skyward Blade",
+        rating:"5 star",
+        type:"Sword",
+        baseatk:"46",
+        secstat:"ER%",
+        description:"CRIT Rate increased by 4%. Gains Skypiercing Might upon using an Elemental Burst: Increases Movement SPD by 10%, increases ATK SPD by 10%, and increases the DMG of Normal and Charged Attack hits by 20% for 12s."
+    ),
+    WeaponItem(
+        image:"Dragonsbane",
+        name:"Dragon's Bane",
+        rating:"4 star",
+        type:"Polearm",
+        baseatk:"41",
+        secstat:"EM+",
+        description:"Increases DMG against enemies affected by Hydro or Pyro by 20%."
+    ),
+    WeaponItem(
+        image:"Serpentsspine",
+        name:"Serpent Spine",
+        rating:"4 star",
+        type:"Claymore",
+        baseatk:"42",
+        secstat:"CRITR%",
+        description:"Every 4s a character is on the field, they will deal 6% more DMG and take 3% more DMG. This effect has a maximum of 5 stacks and will not be reset if the character leaves the field, but will be reduced by 1 stack when the character takes DMG."
     )
 ]
 
@@ -19,6 +59,10 @@ struct WeaponItem: Identifiable{
     let id = UUID()
     let image: String
     let name: String
+    let rating: String
+    let type: String
+    let baseatk: String
+    let secstat: String
     let description: String
 }
 
@@ -67,21 +111,38 @@ struct WeaponDetailsView: View {
             }
             Image(weaponItem.image)
                 .resizable()
-                
+            
                     .shadow(radius: 3)
                     .font(.largeTitle)
                     .frame(width: 100, height: 100)
+            Image(weaponItem.rating)
+                .resizable()
+                
+                    
+                    .font(.largeTitle)
+                    .frame(width: 300, height: 50)
             
             
             Text(weaponItem.name)
                 .font(.largeTitle)
                 .bold()
-          
-            Text("Description : " + weaponItem.description)
+            
+            Text("Type : " + weaponItem.type)
+            Text("Base ATK : " + weaponItem.baseatk)
+            Text("Secondary Stat : " + weaponItem.secstat)
+            Text("Special Ability")
                 .font(.largeTitle)
             
-            Spacer()
+            Text(weaponItem.description)
+            Text("Ascension Materials")
+                .font(.largeTitle)
+            
+            
+                
+            
+           
         }
+        Spacer()
         .padding()
         .navigationBarTitle(Text(weaponItem.name), displayMode: .inline)
         
